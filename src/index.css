@@ -12,17 +12,27 @@
 
 @layer components {
     .list {
-        @apply flex w-full xl:w-5/12 justify-center items-center rounded-md py-6 text-midnight-gray bg-off-white;
+        @apply flex flex-wrap justify-center border border-dashed border-lawn-green p-3 shadow-md shadow-lawn-green m-4;
     }
 
-    .menu-border {
-        @apply border-2 border-lawn-green mr-2;
+    .item-list {
+        @apply mr-2 sm:text-2xl;
     }
 
-}
-
-@layer utilities {
-    .menu-hover {
-        @apply hover:ml-5 duration-1000;
+    .card {
+        @apply w-full shadow-custom mb-20 rounded-md bg-gray-800;
     }
+
+    .content {
+        @apply flex flex-col p-8 text-base sm:text-lg gap-2 sm:gap-8;
+    }
+
+    .title-card {
+        @apply font-tech text-lawn-green pb-2;
+    }
+
+    .link-card {
+        @apply flex items-center font-tech text-lawn-green;
+    }
+
 }
