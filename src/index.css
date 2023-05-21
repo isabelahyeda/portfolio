@@ -2,13 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
-
-*, html {
-    scroll-behavior: smooth;
-}
-
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    *, html {
+        scroll-behavior: smooth;
+    }
+    
+    html ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    html ::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background: #1F2937;
+    }
+    
+    html ::-webkit-scrollbar-track {
+        background: #1D1D29;
+    }
+
+    body, a, a:hover {
+        cursor: none;
+    }
+
+}
 
 @layer components {
     .list {
@@ -20,7 +40,7 @@
     }
 
     .card {
-        @apply w-full shadow-custom mb-20 rounded-md bg-gray-800;
+        @apply w-full shadow-custom mb-24 rounded-md bg-gray-800;
     }
 
     .content {
@@ -33,6 +53,14 @@
 
     .link-card {
         @apply flex items-center font-tech text-lawn-green;
+    }
+
+    .cursor {
+        @apply w-12 h-12 border-2 border-lawn-green rounded-full fixed transform -translate-y-2/4 -translate-x-2/4 pointer-events-none;
+    }
+
+    .grow {
+        @apply scale-150;
     }
 
 }

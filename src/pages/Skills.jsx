@@ -4,11 +4,9 @@ import { SiTypescript, SiTailwindcss, SiStyledcomponents } from "react-icons/si"
 
 const Skills = () => {
   return (
-    <div className="pb-20">
-      <div className="pb-14 text-lg xl:text-2xl">
-        <h1 className="font-semibold pb-10">Habilidades</h1>
-        <p>Tecnologias com as quais já trabalhei:</p>
-      </div>
+    <div className="pb-24">
+        <h1 className="text-lg xl:text-2xl font-semibold py-5 sticky top-0 bg-midnight-gray sm:static">Habilidades</h1>
+        <p className="text-lg xl:text-2xl pt-10 pb-24">Tecnologias com as quais já trabalhei:</p>
       <div className="inline-block">
         <ul className="flex flex-wrap justify-center text-md sm:text-lg font-tech text-lawn-green font-semibold">
           <li className="list">
