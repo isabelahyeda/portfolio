@@ -30,9 +30,11 @@ const Main = () => {
       if (mouseCursor.current && arrayLinks.length > 0) {
         link.addEventListener("mouseover", () => {
           mouseCursor.current.classList.add("grow");
+          link.classList.add("link-hover")
         });
         link.addEventListener("mouseleave", () => {
           mouseCursor.current.classList.remove("grow");
+          link.classList.remove("link-hover")
         });
       }
     });

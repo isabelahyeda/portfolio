@@ -3,14 +3,14 @@ import { HiArrowUpRight } from "react-icons/hi2";
 const Projects = () => {
   return (
     <div className="pb-24 text-lg xl:text-2xl">
-      <h1 className="font-semibold py-5 sticky top-0 bg-midnight-gray sm:static">Projetos</h1>
+      <h1 className="sticky-title">Projetos</h1>
       <div className="flex flex-wrap pt-10">
         <div className="card">
           <div className="content">
             <h1 className="title-card">SouJunior</h1>
             <p>
               Projeto open source com objetivo de preparar novos profissionais juniores
-              para o mercado de trabalho na área de tecnologia através de experiências práticas.
+              para o mercado de trabalho, na área de tecnologia, através de experiências práticas.
               Participação como Desenvolvedora Front-end.
             </p>
             <a className="link-card" href="https://github.com/SouJunior/vagas-frontend">

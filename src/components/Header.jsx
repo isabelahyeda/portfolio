@@ -10,8 +10,8 @@ const Header = () => {
         <header className="text-3xl flex flex-col fixed">
             <div className="pt-16 hidden sm:block">
                 <div className="flex flex-col justify-between h-72">
-                    <img className="rounded-full w-[152px] h-[200px] border-2 border-lawn-green" src={ProfileImage} alt="foto de perfil" />
-                    <ul className="flex self-center gap-5 text-lawn-green">
+                    <img className="rounded-full w-[152px] h-[200px] border-2 border-lawn-green self-center" src={ProfileImage} alt="foto de perfil" />
+                    <ul className="flex self-center gap-10 text-lawn-green">
                         <li>
                             <a href="https://github.com/isabelahyeda">
                                 <VscGithub />

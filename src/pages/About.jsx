@@ -6,7 +6,7 @@ const About = () => {
                 <h2 className="font-tech text-lawn-green text-lg xl:text-2xl">Desenvolvedora Front-end</h2>
             </div>
             <div className="text-lg xl:text-2xl">
-                <h1 className="font-semibold py-5 sticky top-0 bg-midnight-gray sm:static">Sobre</h1>
+                <h1 className="sticky-title">Sobre</h1>
                 <div className="leading-10 pt-10">
                     <p className="mb-7">
                         Iniciei em 2022 minha trajetória como Desenvolvedora Front-end,
@@ -16,8 +16,8 @@ const About = () => {
                         Desafios me motivam e busco sempre oportunidades de expandir meus conhecimentos.
                     </p>
                     <p>
-                        Quando não estou programando, gosto de jogar com o meu marido, ficar pertinho da minha gata, passear
-                        ao ar livre ou assistir a jogos de tênis.
+                        Quando não estou programando gosto de estar em família, viajar com o meu marido, ficar pertinho da minha gata,
+                        passear ao ar livre ou assistir a jogos de tênis.
                     </p>
                 </div>
             </div>

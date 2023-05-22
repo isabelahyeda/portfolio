@@ -6,11 +6,6 @@
 @tailwind utilities;
 
 @layer base {
-
-    *, html {
-        scroll-behavior: smooth;
-    }
-    
     html ::-webkit-scrollbar {
         width: 10px;
     }
@@ -32,7 +27,7 @@
 
 @layer components {
     .list {
-        @apply flex flex-wrap justify-center border border-dashed border-lawn-green p-3 shadow-md shadow-lawn-green m-4;
+        @apply flex flex-wrap justify-center border border-dashed border-lawn-green p-3 shadow-md shadow-lawn-green m-3;
     }
 
     .item-list {
@@ -40,7 +35,7 @@
     }
 
     .card {
-        @apply w-full shadow-custom mb-24 rounded-md bg-gray-800;
+        @apply w-full custom-shadow mb-24 rounded-md bg-gray-800;
     }
 
     .content {
@@ -52,15 +47,36 @@
     }
 
     .link-card {
-        @apply flex items-center font-tech text-lawn-green;
+        @apply flex items-center font-tech text-lawn-green w-max;
     }
 
     .cursor {
-        @apply w-12 h-12 border-2 border-lawn-green rounded-full fixed transform -translate-y-2/4 -translate-x-2/4 pointer-events-none;
+        @apply w-12 h-12 border-2 border-lawn-green rounded-full fixed transform -translate-y-2/4 -translate-x-2/4 pointer-events-none custom-transition;
     }
 
     .grow {
-        @apply scale-150;
+        @apply scale-150 bg-lawn-green;
     }
 
+    .link-hover {
+        @apply text-midnight-gray z-10;
+    }
+
+    .sticky-title {
+        @apply font-semibold py-5 sticky top-0 bg-midnight-gray sm:static;
+    }
+
+}
+
+@layer utilities {
+    .custom-transition {
+        transition-property: transform, background-color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+    }
+
+    .custom-shadow {
+        box-shadow:20px 20px 50px rgba(0,0,0,0.5);
+    }
+    
 }
