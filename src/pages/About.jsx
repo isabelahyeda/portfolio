@@ -1,9 +1,32 @@
+import { FiLinkedin } from "react-icons/fi";
+import { VscMail, VscGithub } from "react-icons/vsc";
+
 const About = () => {
+
+    const email = "isabelahyeda@gmail.com"
+
     return (
         <div className="pb-24">
             <div className="pb-24">
                 <h1 className="font-semibold text-xl xl:text-3xl pb-4">Isabela Schurhaus Hyeda Buitoni</h1>
-                <h2 className="font-tech text-lawn-green text-lg xl:text-2xl">Desenvolvedora Front-end</h2>
+                <h2 className="font-tech text-lawn-green text-lg xl:text-2xl pb-10 sm:pb-0">Desenvolvedora Front-end</h2>
+                <ul className="flex self-center gap-10 text-lawn-green text-lg xl:text-2xl sm:hidden">
+                    <li>
+                        <a href="https://github.com/isabelahyeda">
+                            <VscGithub />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/isabelahyeda">
+                            <FiLinkedin />
+                        </a>
+                    </li>
+                    <li>
+                        <a href={`mailto:${email}`}>
+                            <VscMail />
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div className="text-lg xl:text-2xl">
                 <h1 className="sticky-title">Sobre</h1>

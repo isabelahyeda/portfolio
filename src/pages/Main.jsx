@@ -12,6 +12,11 @@ const Main = () => {
     if (mouseCursor.current) {
       mouseCursor.current.style.top = e.pageY + "px";
       mouseCursor.current.style.left = e.pageX + "px";
+    }
+  });
+
+  window.addEventListener("mouseover", (e) => {
+    if (mouseCursor.current) {
       mouseCursor.current.style.display = "block"
     }
   });
@@ -42,7 +47,7 @@ const Main = () => {
 
   return (
     <div className="flex text-body bg-midnight-gray text-off-white justify-center overflow-y-auto h-screen">
-      <div ref={mouseCursor} className="cursor"></div>
+      <div id="cursor" ref={mouseCursor} className="cursor"></div>
       <div className="flex sm:mx-32 sm:w-[1000px]">
         <div className="sm:w-6/12">
           <div className="absolute">
