@@ -50,7 +50,7 @@ const Main = () => {
       <div id="cursor" ref={mouseCursor} className="cursor"></div>
       <div className="flex sm:mx-32 sm:w-[1000px]">
         <div className="sm:w-6/12">
-          <div className="absolute">
+          <div>
             <Header />
           </div>
         </div>

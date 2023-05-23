@@ -57,7 +57,7 @@
     }
 
     .cursor {
-        @apply w-12 h-12 border-2 border-lawn-green rounded-full fixed transform -translate-y-2/4 -translate-x-2/4 pointer-events-none custom-transition;
+        @apply w-12 h-12 border-2 border-lawn-green rounded-full fixed transform -translate-y-2/4 -translate-x-2/4 pointer-events-none custom-transition z-10;
     }
 
     .sticky-title {
@@ -70,7 +70,7 @@
         }
         
         .link-hover {
-            @apply text-midnight-gray z-10;
+            @apply text-midnight-gray z-20;
         }
     }
 }
