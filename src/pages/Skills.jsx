@@ -1,46 +1,36 @@
 import { DiHtml5, DiCss3, DiReact, DiBootstrap, DiJavascript1 } from "react-icons/di";
-import { SiTypescript, SiTailwindcss, SiStyledcomponents } from "react-icons/si";
-
+import { SiTypescript, SiTailwindcss, SiStyledcomponents, SiMui } from "react-icons/si";
 
 const Skills = () => {
+
+  const skills = [
+    { id: 1, name: "HTML", icon: <DiHtml5 /> },
+    { id: 2, name: "CSS", icon: <DiCss3 /> },
+    { id: 3, name: "Bootstrap", icon: <DiBootstrap /> },
+    { id: 4, name: "Tailwind", icon: <SiTailwindcss /> },
+    { id: 5, name: "Styled-components", icon: <SiStyledcomponents /> },
+    { id: 6, name: "Material UI", icon: <SiMui /> },
+    { id: 7, name: "React", icon: <DiReact /> },
+    { id: 8, name: "JavaScript", icon: <DiJavascript1 /> },
+    { id: 9, name: "TypeScript", icon: <SiTypescript /> },
+  ];
+
   return (
     <div className="pb-24">
-        <h1 className="text-lg xl:text-2xl sticky-title">Habilidades</h1>
-        <p className="text-lg xl:text-2xl pt-10 pb-24">Tecnologias com as quais já trabalhei:</p>
+      <h1 className="text-lg xl:text-2xl sticky-title">HABILIDADES</h1>
+      <p className="text-lg xl:text-2xl pt-10 pb-24">Tecnologias com as quais já trabalhei:</p>
       <div className="inline-block">
         <ul className="flex flex-wrap justify-center text-md sm:text-lg font-tech text-lawn-green font-semibold">
-          <li className="list">
-            <span className="item-list"><DiHtml5 /></span>
-            <span>HTML</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><DiCss3 /></span>
-            <span>CSS</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><DiBootstrap /></span>
-            <span>Bootstrap</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><SiTailwindcss /></span>
-            <span>Tailwind</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><SiStyledcomponents /></span>
-            <span>Styled-components</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><DiReact /></span>
-            <span>React</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><DiJavascript1 /></span>
-            <span>JavaScript</span>
-          </li>
-          <li className="list">
-            <span className="item-list"><SiTypescript /></span>
-            <span>TypeScript</span>
-          </li>
+          {
+            skills.map((skill) => {
+              return (
+                <li className="list" key={skill.id}>
+                  <span className="item-list">{skill.icon}</span>
+                  <span>{skill.name}</span>
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
     </div>

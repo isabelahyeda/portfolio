@@ -1,10 +1,15 @@
 import { FiLinkedin } from "react-icons/fi";
-import { VscMail, VscGithub } from "react-icons/vsc";
-import ProfileImage from "../assets/images/portfolio.jpg"
+import { VscGithub } from "react-icons/vsc";
+import { PiGitlabLogo } from "react-icons/pi";
+import ProfileImage from "../assets/images/portfolio.jpg";
 
 const Header = () => {
 
-    const email = "isabelahyeda@gmail.com"
+    const profiles = [
+        { id: 1, link: "https://github.com/isabelahyeda", icon: <VscGithub /> },
+        { id: 2, link: "https://gitlab.com/isabelahyeda", icon: <PiGitlabLogo /> },
+        { id: 3, link: "https://www.linkedin.com/in/isabelahyeda", icon: <FiLinkedin /> },
+    ];
 
     return (
         <header className="text-3xl">
@@ -13,21 +18,17 @@ const Header = () => {
             </div>
             <div className="pt-16 hidden sm:block fixed z-20 top-[258px]">
                 <ul className="flex gap-10 text-lawn-green">
-                    <li>
-                        <a href="https://github.com/isabelahyeda">
-                            <VscGithub />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/isabelahyeda">
-                            <FiLinkedin />
-                        </a>
-                    </li>
-                    <li>
-                        <a href={`mailto:${email}`}>
-                            <VscMail />
-                        </a>
-                    </li>
+                    {
+                        profiles.map((profile) => {
+                            return (
+                                <li key={profile.id}>
+                                    <a href={profile.link}>
+                                        {profile.icon}
+                                    </a>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
             </div>
         </header>
