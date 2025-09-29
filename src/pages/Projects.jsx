@@ -9,12 +9,6 @@ const Projects = () => {
       link: "https://github.com/SouJunior/vagas-frontend",
       description: "Projeto open source com objetivo de preparar novos profissionais juniores para o mercado de trabalho, na área de tecnologia, através de experiências práticas. Participação como Desenvolvedora Front-end."
     },
-    {
-      id: 2,
-      title: "Calculadora de IMC",
-      link: "https://github.com/isabelahyeda/calculo-imc",
-      description: " Foi meu primeiro projeto realizado em JavaScript, onde criei uma aplicação para o cálculo do Índice de Massa Corporal (IMC), retornando o resultado e a classificação do IMC segundo a OMS."
-    }
   ];
 
   return (
